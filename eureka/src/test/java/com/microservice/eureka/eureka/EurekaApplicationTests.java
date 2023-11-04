@@ -1,10 +1,10 @@
-package com.celulares.celulares;
+package com.microservice.eureka.eureka;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CelularesApplicationTests {
+class EurekaApplicationTests {
 
 	@Test
 	void contextLoads() {
