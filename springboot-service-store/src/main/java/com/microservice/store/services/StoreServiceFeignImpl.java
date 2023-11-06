@@ -24,7 +24,7 @@ public class StoreServiceFeignImpl implements StoreService {
 
     @Override
     public Store findById(Long id, Integer cantidad) {
-       return new Store(clientFeign.detail(id),cantidad);
+        return new Store(clientFeign.detail(id), cantidad);
     }
 
 }

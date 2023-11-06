@@ -33,12 +33,12 @@ public class CelularController {
             cel.setPort(port);
             return cel;
         }).collect(Collectors.toList());
-        
+
     }
 
     @GetMapping("/celular/{id}")
     public Celular detail(@PathVariable Long id) {
-        
+
         try {
             Thread.sleep(2000L);
         } catch (Exception e) {
@@ -55,7 +55,7 @@ public class CelularController {
     }
 
     @PostMapping("/celular")
-    public ResponseEntity<Celular> add(@RequestBody Celular instance){
+    public ResponseEntity<Celular> add(@RequestBody Celular instance) {
         Celular cel = service.save(instance);
         return new ResponseEntity<>(cel, HttpStatus.CREATED);
     }

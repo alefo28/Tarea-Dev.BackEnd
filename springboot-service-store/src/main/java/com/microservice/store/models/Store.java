@@ -5,13 +5,13 @@ public class Store {
     private Integer cantidad;
 
     public Store() {
-        
+
     }
 
-    public Store(Celular cel, Integer cantidad){
+    public Store(Celular cel, Integer cantidad) {
         super();
         this.cel = cel;
-        this. cantidad = cantidad;
+        this.cantidad = cantidad;
     }
 
     public Celular getCel() {
