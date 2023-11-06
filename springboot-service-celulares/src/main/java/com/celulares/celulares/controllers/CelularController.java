@@ -38,6 +38,13 @@ public class CelularController {
 
     @GetMapping("/celular/{id}")
     public Celular detail(@PathVariable Long id) {
+        
+        try {
+            Thread.sleep(2000L);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         return service.findById(id);
     }
 
