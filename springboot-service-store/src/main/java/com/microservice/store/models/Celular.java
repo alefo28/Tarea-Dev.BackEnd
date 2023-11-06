@@ -13,6 +13,12 @@ public class Celular {
 
     private Integer port;
 
+    public Celular(Long id, String name, String Marca) {
+        this.id = id;
+        this.name = name;
+        this.marca = marca;
+    }
+
     public Long getId() {
         return this.id;
     }
