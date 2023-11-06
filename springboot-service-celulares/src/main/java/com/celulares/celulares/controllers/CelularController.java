@@ -33,6 +33,12 @@ public class CelularController {
             cel.setPort(port);
             return cel;
         }).collect(Collectors.toList());
+        
+    }
+
+    @GetMapping("/celular/{id}")
+    public Celular detail(@PathVariable Long id) {
+        return service.findById(id);
     }
 
     @DeleteMapping("/celular/{id}")
