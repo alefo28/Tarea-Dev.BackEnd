@@ -11,7 +11,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "roles")
-public class Rol implements Serializable{
+public class Role implements Serializable{
     
     private static final long serialVersionUID = 57097988023834L;
 

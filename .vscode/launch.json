@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringbootServiceUsuariosApplication<springboot-service-usuarios>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.microservice.usuarios.springbootserviceusuarios.SpringbootServiceUsuariosApplication",
+            "projectName": "springboot-service-usuarios",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-EurekaApplication<eureka>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.microservice.eureka.eureka.EurekaApplication",
+            "projectName": "eureka",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

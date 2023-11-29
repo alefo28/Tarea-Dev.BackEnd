@@ -1,13 +1,19 @@
 package com.microservice.usuarios.entity;
 
 import java.io.Serializable;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
+import jakarta.persistence.UniqueConstraint;
 
 @Entity
 @Table(name = "usuarios")
@@ -33,6 +39,11 @@ public class Usuario implements Serializable {
     private String nombre;
 
     private String apellido;
+
+    @ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(name = "usuarios_to_roles", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name ="roles_id"),
+			uniqueConstraints = {@UniqueConstraint(columnNames = {"user_id", "roles_id"})})
+	private List<Role> roles;
 
     public Long getId() {
         return this.id;
@@ -89,5 +100,13 @@ public class Usuario implements Serializable {
     public void setApellido(String apellido) {
         this.apellido = apellido;
     }
+
+    public List<Role> getRoles() {
+		return roles;
+	}
+
+	public void setRoles(List<Role> roles) {
+		this.roles = roles;
+	}
 
 }
