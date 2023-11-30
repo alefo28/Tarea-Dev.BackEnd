@@ -19,6 +19,26 @@
             "projectName": "eureka",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-CelularesApplication<springboot-service-celulares>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.celulares.celulares.CelularesApplication",
+            "projectName": "springboot-service-celulares",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringbootServiceZuulServiceApplication<springboot-service-zuul-service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.microservice.zuul.springbootservicezuulservice.SpringbootServiceZuulServiceApplication",
+            "projectName": "springboot-service-zuul-service",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }

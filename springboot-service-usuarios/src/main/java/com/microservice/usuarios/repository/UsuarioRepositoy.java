@@ -2,9 +2,10 @@ package com.microservice.usuarios.repository;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
-
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import com.microservice.usuarios.entity.Usuario;
 
+@RepositoryRestResource(path = "usuarios")
 public interface UsuarioRepositoy extends PagingAndSortingRepository<Usuario, Long>{
 
 	//select u from Usuario u where u.ysername = ?1
@@ -18,4 +19,4 @@ public interface UsuarioRepositoy extends PagingAndSortingRepository<Usuario, Lo
 
 	@Query(value = "select u from Usuario u where u.username = ?1 and u.email = ?2")
 	public Usuario obtenerPorUsernameYEmail(String username, String email);
-}
+} 
