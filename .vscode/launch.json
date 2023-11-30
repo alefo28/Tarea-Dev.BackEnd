@@ -39,6 +39,16 @@
             "projectName": "springboot-service-zuul-service",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringbootServiceOauthApplication<springboot-service-oauth>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.microservice.ouath.springbootserviceoauth.SpringbootServiceOauthApplication",
+            "projectName": "springboot-service-oauth",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }

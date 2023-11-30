@@ -18,6 +18,10 @@ zuul:
    users:
     service-id: service-usuarios
     path: /api/us/**
+   oauth:
+    service-id: servicio-oauth
+    path: /api/security/**
+    sensitive-headers: Cookie,Set-Cookie
 
 ribbon:
   ConnectTimeout: 3000
@@ -26,5 +30,5 @@ hystrix:
   command:
     default:
       execution:
-        isolation:
+        isolation: 
           timeoutInMilliseconds: 20000
